@@ -1,0 +1,27 @@
+<!-- Develop  and  demonstrate  a  HTML5  file  that  includes JavaScript  script  that  uses functions for the following problem: a.Parameter: A string
+  Output: The position in the string of the left-most vowel -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1JS16CS063</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = prompt("Enter The String","");
+		str = str.toUpperCase();
+		for(var i=0;  i<str.length; i++){
+			var chr = str.charAt(i);
+			if(chr=='A' || chr=='E' || chr=='I' || chr=='O' || chr=='U'){
+				break;
+			}
+		}
+		if(i<str.length){
+			alert("String Is "+str+"\nLeftmost Vowel Is "+str.charAt(i)+" At "+(i+1));
+		}
+		else{
+			alert("No Vowels");
+		}
+	</script>	
+</body>
+</html>

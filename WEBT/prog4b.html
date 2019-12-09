@@ -1,0 +1,29 @@
+<!-- Develop  and  demonstrate  a  HTML5  file  that  includes JavaScript  script  that  uses functions for the following problem: 
+b.Parameter: A number
+  Output: The number with its digits in the reverse order -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1JS16CS063</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num, reverse=0, remainder;
+		var n = prompt("Enter A Number","");
+		if(isNaN(n)){
+			alert("Enter Valid Number");
+		}
+		else{
+			num = n;
+			
+			while(num!=0){
+				remainder = num%10;
+				reverse = reverse*10 + remainder;
+				num = parseInt(num/10);
+			}
+			alert("Number: "+n+" Reverse: "+reverse);
+		}
+	</script>
+</body>
+</html>

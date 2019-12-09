@@ -1,0 +1,82 @@
+ <!-- Write a JavaScript to design a simple calculator to perform the following operations: sum, product, difference and quotient. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1JS16CS063</title>
+
+	<style type="text/css">
+		table,td,th{
+			border: 1px solid black;
+			width: 35%;
+			text-align: center;
+			background-color: DarkGray;
+		}
+		table{margin: auto;}
+		input{text-align: right;}
+	</style>
+
+	<script type="text/javascript">
+		function add(){
+			var num1 = parseFloat(document.getElementById("number1").value);
+			var num2 = parseFloat(document.getElementById("number2").value);
+			if(isNaN(num1) || isNaN(num2)){
+				alert("Enter Valid Number");
+			}
+			else{
+				document.getElementById("answer").value=num1+num2;
+			}
+		}
+		function sub(){
+			var num1 = parseFloat(document.getElementById("number1").value);
+			var num2 = parseFloat(document.getElementById("number2").value);
+			if(isNaN(num1) || isNaN(num2)){
+				alert("Enter Valid Number");
+			}
+			else{
+				document.getElementById("answer").value=num1-num2;
+			}
+		}
+		function mul(){
+			var num1 = parseFloat(document.getElementById("number1").value);
+			var num2 = parseFloat(document.getElementById("number2").value);
+			if(isNaN(num1) || isNaN(num2)){
+				alert("Enter Valid Number");
+			}
+			else{
+				document.getElementById("answer").value=num1*num2;
+			}
+		}
+		function div(){
+			var num1 = parseFloat(document.getElementById("number1").value);
+			var num2 = parseFloat(document.getElementById("number2").value);
+			if(isNaN(num1) || isNaN(num2)){
+				alert("Enter Valid Number");
+			}
+			else{
+				document.getElementById("answer").value=num1/num2;
+			}
+		}
+		function cls(){
+			number1.value="";
+			number2.value="";
+			answer.value="";
+		}
+	</script>
+</head>
+
+
+<body>
+	<table>
+		<tr><th colspan="4">Simple Calculator</th></tr>
+		<tr><td>Number 1</td><td><input type="text" id="number1" name="number1" value=""/></td>
+			<td>Number 2</td><td><input type="text" id="number2" name="number2" value=""/></td></tr>
+		<tr><td><input type="button" name="Add" value="Add" onclick="javascript:add()"/></td>
+			<td><input type="button" name="Sub" value="Sub" onclick="javascript:sub()"/></td>
+			<td><input type="button" name="Mul" value="Mul" onclick="javascript:mul()"/></td>
+			<td><input type="button" name="Div" value="Div" onclick="javascript:div()"/></td></tr>
+		<tr><td>Answer:</td><td><input type="text" id="answer" name="answer" value="" disabled/></td>
+			<td colspan="2"><input type="button" name="clear" value="CLEAR ALL" onclick="javascript:cls()"/></td></tr>
+	</table>
+</body>
+</html>
